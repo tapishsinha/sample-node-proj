@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: sample-node-gke
+spec:
+  selector:
+    app: sample-node-gke
+  type: LoadBalancer
+  ports:
+    - port: 80
+      targetPort: 5000
